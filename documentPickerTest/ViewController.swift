@@ -6,14 +6,16 @@
 //
 
 import UIKit
+internal import UniformTypeIdentifiers
 
 class ViewController: UIViewController {
+    
+    let picker = UIDocumentPickerViewController(forOpeningContentTypes: [.folder])
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.present(self.picker, animated: true)
     }
-
 
 }
 
